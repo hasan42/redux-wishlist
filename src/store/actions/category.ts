@@ -24,17 +24,48 @@ export function fetchCategories() {
   };
 }
 
-export function addNewCategory() {
+export function addNewCategory(name: string) {
   return async (dispatch: any) => {
     try {
       let formData = new FormData();
       formData.append("actions", "add new");
-      formData.append("name", "reduxTest");
+      formData.append("name", name);
 
       await axios.post("category.php", formData, {
         responseType: "text",
       });
 
+      dispatch(fetchCategories());
+    } catch (error) {
+      console.log("error ", error);
+    }
+  };
+}
+
+export function removeCategory(id: any) {
+  return async (dispatch: any) => {
+    try {
+      await axios.delete("category.php", { params: { id: id } });
+
+      dispatch(fetchCategories());
+    } catch (error) {
+      console.log("error ", error);
+    }
+  };
+}
+
+export function toggleCategory(id: any, done: string) {
+  return async (dispatch: any) => {
+    try {
+      let newDone = done === "1" ? "0" : "1";
+      let formData = new FormData();
+      formData.append("actions", "toggle done");
+      formData.append("id", id);
+      formData.append("done", newDone);
+
+      await axios.post("category.php", formData, {
+        responseType: "text",
+      });
       dispatch(fetchCategories());
     } catch (error) {
       console.log("error ", error);
