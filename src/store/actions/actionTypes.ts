@@ -1,0 +1,16 @@
+export const TOGGLE_DONE = "TOGGLE_DONE";
+
+export const GET_CATEGORIES = "GET_CATEGORIES";
+export const GET_CATEGORY_REMOTE = "GET_CATEGORY_REMOTE";
+export const TOGGLE_DONE_CATEGORY = "TOGGLE_DONE_CATEGORY";
+export const ADD_CATEGORY = "ADD_CATEGORY";
+export const DEL_CATEGORY = "DEL_CATEGORY";
+
+export const GET_ITEMS = "GET_ITEMS";
+export const GET_ITEMS_REMOTE = "GET_ITEMS_REMOTE";
+export const GET_MIN_PRICE = "GET_MIN_PRICE";
+export const GET_MAX_PRICE = "GET_MAX_PRICE";
+export const TOGGLE_DONE_ITEMS = "TOGGLE_DONE_ITEMS";
+export const ADD_ITEM = "ADD_ITEM";
+export const DEL_ITEM = "DEL_ITEM";
+export const DEL_ITEMS_BY_CATEGORY = "DEL_ITEMS_BY_CATEGORY";
