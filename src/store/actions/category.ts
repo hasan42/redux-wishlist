@@ -73,7 +73,7 @@ export function toggleCategory(id: any, done: string) {
   };
 }
 
-export function getCategories(category: any) {
+export function getCategories(category: Category[]) {
   return {
     type: GET_CATEGORIES,
     category,

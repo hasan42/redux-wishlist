@@ -1,6 +1,5 @@
 import React from "react";
-import "./App.css";
-import { Wish } from "./ui/Wish/Wish";
+import Wish from "./ui/Wish/Wish";
 
 function App() {
   return (

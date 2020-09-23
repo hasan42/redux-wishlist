@@ -10,7 +10,7 @@ import {
 } from "../actions/actionTypes";
 
 const initialState = {
-  category: [],
+  items: [],
 };
 
 export default function categoryReducer(state = initialState, action: any) {
@@ -18,6 +18,7 @@ export default function categoryReducer(state = initialState, action: any) {
     case GET_ITEMS:
       return {
         ...state,
+        items: action.items,
       };
     case GET_ITEMS_REMOTE:
       return {
